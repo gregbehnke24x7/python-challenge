@@ -54,8 +54,11 @@ print("Average Change: $" + str(delta_avg))
 print("Greatest Increase in Profits: " + max_incr_line)
 print("Greatest Decrease in Profits: " + max_decr_line)
 
+# setup path to output directory
+destfile = os.path.join('analysis', "PyBank.txt")
+
 # output to file
-with open("PyBank.txt", "w") as output:
+with open(destfile, "w") as output:
     output.write("Financial Analysis\n")
     output.write("Number of months: " + str(total_months) + "\n")
     output.write("Total: $" + str(total_dollars)+ "\n")
